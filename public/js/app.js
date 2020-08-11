@@ -115,8 +115,8 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/mageinn/work/movie/src/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/mageinn/work/movie/src/resources/css/main.css */"./resources/css/main.css");
+__webpack_require__(/*! C:\laragon\www\Movie\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\Movie\resources\css\main.css */"./resources/css/main.css");
 
 
 /***/ })
