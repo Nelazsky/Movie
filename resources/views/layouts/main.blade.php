@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="../../css/main.css">
     @livewireStyles
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 <body class="font-sans bg-gray-900 text-white">
 <nav class="border-b border-grey-700">
@@ -24,13 +26,13 @@
                 </a>
             </li>
             <li class="md:ml-16 mt-3 md:mt-0">
-                <a href="{{route('movies.index')}}" class="hover:text-gray-300">Movies</a>
+                <a href="{{route('movies.index')}}" class="hover:text-gray-300">Фильмы</a>
             </li>
             <li class="md:ml-6 mt-3 md:mt-0">
-                <a href="" class="hover:text-gray-300">TV Shows</a>
+                <a href="" class="hover:text-gray-300">ТВ щоу</a>
             </li>
             <li class="md:ml-6 mt-3 md:mt-0">
-                <a href="" class="hover:text-gray-300">Actors</a>
+                <a href="" class="hover:text-gray-300">Актеры</a>
             </li>
         </ul>
 

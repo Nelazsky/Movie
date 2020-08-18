@@ -1,7 +1,13 @@
-<div class="relative mt-3 md:mt-0">
-    <input wire:model.debounce.500ms="search" type="text"
-           class=" bg-gray-800 rounded-full w-64  px-8 py-1 focus:outline-none focus:shadow-outline"
-           placeholder="Search">
+<div class="relative mt-3 md:mt-0" x-data="{ isOpen: true}" @click.away="isOpen = false">
+    <input
+        wire:model.debounce.500ms="search"
+        type="text"
+        class=" bg-gray-800 rounded-full w-64  px-8 py-1 focus:outline-none focus:shadow-outline"
+        placeholder="Поиск фильмов"
+        @focus="isOpen = true"
+        @keydown.escape.window="isOpen = false "
+        @keydown.shift.tab="isOpen = false "
+    >
     <div class="absolute top-0">
         <svg class="fill-current w-4 text-gray-500 mt-2 ml-2" viewBox="0 0 24 24">
             <path class="heroicon-ui"
@@ -12,7 +18,10 @@
     <div wire:loading class="spinner top-0 right-0 mr-4 mt-4"></div>
 
     @if(strlen($search) >= 2)
-        <div class="absolute bg-gray-800 text-sm rounded w-64 mt-4">
+        <div
+            class="z-50 absolute bg-gray-800 text-sm rounded w-64 mt-4"
+            x-show="isOpen"
+        >
             @if($searchResults->count() > 0)
                 <ul>
                     @foreach($searchResults as $result)
